@@ -29,6 +29,7 @@ You are overweight. You should see your doctor.
 
 Constraint
 Ensure your program takes only numeric data. Don’t let the user continue unless the data is valid.
+
 Challenges
 Make the user interface accept height and weight in Imperial or metric units.
 You’ll need a slightly different formula for metric units.
@@ -37,5 +38,32 @@ Use a GUI interface with sliders for height and weight. Update the user interfac
 Use colors as well as text to indicate health.
 */
 
+import java.util.Scanner;
+
 public class App {
+    public static void main(String[] args) {
+
+        int height, weight, bmi;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter your height: ");
+        height = sc.nextInt();
+
+        System.out.print("Please enter your weight: ");
+        weight = sc.nextInt();
+
+        bmi = (weight / (height * height) * 703);
+
+        // System.out.println(bmi);
+
+        if ( 18.5 <= bmi && bmi <= 25 ) {
+            System.out.println("Your BMI is " + bmi + ".\nYou are within the ideal weight range.");
+        }
+        else if ( bmi > 25) {
+            System.out.println("Your BMI is " + bmi + ".\nYou are overweight. You should see your doctor.");
+        }
+        else if ( bmi < 18.5) {
+            System.out.println("Your BMI is " + bmi + ".\nYou are underweight. You should see your doctor.");
+        }
+    }
 }
