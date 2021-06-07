@@ -52,7 +52,7 @@ public class App {
         System.out.print("Please enter your weight: ");
         weight = sc.nextInt();
 
-        bmi = (weight / (height * height) * 703);
+        bmi = (int) ((double) weight / (height * height) * 703);
 
         // System.out.println(bmi);
 
