@@ -43,7 +43,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        int height, weight, bmi;
+        int height, weight;
+        double bmi;
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Please enter your height: ");
@@ -52,7 +53,7 @@ public class App {
         System.out.print("Please enter your weight: ");
         weight = sc.nextInt();
 
-        bmi = (int) ((double) weight / (height * height) * 703);
+        bmi = ((double) weight / (height * height) * 703);
 
         // System.out.println(bmi);
 
